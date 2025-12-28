@@ -1,8 +1,8 @@
 body {
   margin: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: linear-gradient(135deg, #0f0f0f, <#864902975494291456>a1a1a);
-  color: #fff;
+  font-family: 'Courier New', Courier, monospace;
+  background: linear-gradient(135deg, #000000, <#864902975494291456>11111);
+  color: #0ff;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -17,34 +17,38 @@ body {
 }
 
 .login-box {
-  background-color: #222;
+  background-color: <#864902975494291456>11;
   padding: 40px;
   border-radius: 10px;
-  box-shadow: 0 0 20px rgba(0,255,255,0.3);
+  box-shadow: 0 0 30px rgba(0,255,255,0.5);
   text-align: center;
-  width: 350px;
-  transition: transform 0.3s ease;
-}
-
-.login-box:hover {
-  transform: scale(1.02);
+  width: 400px;
+  position: relative;
 }
 
 h1 {
   margin-bottom: 30px;
-  font-size: 22px;
-  color: #0ff;
+  font-size: 24px;
   text-shadow: 0 0 10px #0ff;
+}
+
+.terminal {
+  background: #000;
+  border: 1px solid #0ff;
+  padding: 15px;
+  margin-bottom: 20px;
+  position: relative;
+  border-radius: 5px;
 }
 
 input {
   width: 100%;
-  padding: 12px;
+  padding: 10px;
   margin: 10px 0;
-  border: none;
-  border-radius: 6px;
-  background-color: #333;
-  color: #fff;
+  background: #000;
+  border: 1px solid #0ff;
+  color: #0ff;
+  border-radius: 4px;
 }
 
 input:focus {
@@ -70,5 +74,57 @@ button:hover {
 
 #error {
   margin-top: 15px;
-  color: red;
+  color: #ff5555;
+  font-weight: bold;
+}
+
+/* Мигающий курсор */
+#cursor {
+  display: inline-block;
+  width: 10px;
+  height: 20px;
+  background-color: #0ff;
+  margin-left: 2px;
+  animation: blink 1s step-start infinite;
+  vertical-align: middle;
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
+/* Меню для всех страниц кроме login */
+.menu {
+  background-color: <#864902975494291456>11;
+  padding: 10px;
+  display: flex;
+  justify-content: space-around;
+  border-bottom: 1px solid #0ff;
+}
+
+.menu a {
+  color: #0ff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.menu a:hover {
+  color: #00cccc;
+  text-shadow: 0 0 5px #0ff;
+}
+
+/* Таблицы */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+th, td {
+  border: 1px solid #0ff;
+  padding: 8px;
+  text-align: left;
+}
+th {
+  background-color: ⁠#111;
 }
