@@ -6,7 +6,13 @@ function login() {
     window.location.href = 'index.html';
   } else {
     const errorEl = document.getElementById('error');
-    errorEl.textContent = 'Неверный логин или пароль';
+    errorEl.textContent = 'Доступ запрещён. Неверный логин или пароль';
     errorEl.style.color = '#ff5555';
+    document.getElementById('username').style.borderColor = '#ff5555';
+    document.getElementById('password').style.borderColor = '#ff5555';
+    setTimeout(() => {
+      document.getElementById('username').style.borderColor = '#0ff';
+      document.getElementById('password').style.borderColor = '#0ff';
+    }, 500);
   }
 }
